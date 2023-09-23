@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+
+*{
+    @apply font-Poppins p-0 m-0 box-border;
+}
+
+#checkbox:checked + .toggle .bars {
+  @apply absolute duration-500;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  @apply scale-x-0 duration-500;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  @apply w-full rotate-45 duration-500;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  @apply w-full rotate-[-45deg] duration-500;
+}
+
+#checkbox:checked + .toggle {
+  @apply duration-500 rotate-180;
+}
+
+.active{
+  @apply py-1 px-2 rounded-lg bg-[#b2dbc4] font-semibold text-[#19452b];
+}
+
+
+@tailwind utilities;
+
+@layer utilities {
+    .profile-bg{
+      background-image: url("./assets/images/Profile\ Background.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .home-bg{
+      background-image: url("./assets/images/Bg\ image.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .contact-bg{
+      background-image: url("./assets/images/bk-01.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
